@@ -1,4 +1,4 @@
-import { FEATURES } from "../constants";
+import { FEATURES, FEATURES_SECTION } from "../constants";
 
 export function Features() {
   return (
@@ -198,12 +198,10 @@ export function Features() {
             id="features-heading"
             className="text-3xl font-semibold text-white"
           >
-            What we do
+            {FEATURES_SECTION.title}
           </h2>
           <p className="mt-3 text-lg text-slate-300">
-            We bring together students to learn collaboratively, apply
-            industrial methodologies, and build a supportive community focused
-            on growth.
+            {FEATURES_SECTION.description}
           </p>
         </div>
 

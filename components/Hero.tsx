@@ -1,5 +1,5 @@
 import { Link } from "./ui";
-import { BRAND } from "../constants";
+import { BRAND, HERO } from "../constants";
 import { HexagonalGearIcon } from "./icons";
 
 export function Hero() {
@@ -101,15 +101,11 @@ export function Hero() {
               </h1>
 
               <p className="mt-6 text-lg sm:text-xl leading-8 text-slate-200 font-medium">
-                A community of students mastering Data Science, Machine
-                Learning, and AI Engineering
+                {HERO.subtitle}
               </p>
 
               <p className="mt-4 text-base sm:text-lg leading-7 text-slate-400">
-                We bridge the gap between academic theory and real-world AI
-                applications. Join us to build cutting-edge ML models,
-                collaborate on data-driven projects, and grow alongside a
-                community of passionate AI enthusiasts.
+                {HERO.description}
               </p>
 
               <div className="mt-8 flex flex-col sm:flex-row items-center lg:items-center gap-4">
@@ -118,13 +114,13 @@ export function Hero() {
                   variant="button"
                   className="px-8 py-3 text-base whitespace-nowrap cursor-pointer"
                 >
-                  Join Our Community
+                  {HERO.ctaPrimary}
                 </Link>
                 <Link
-                  href="#about"
+                  href="/about"
                   className="text-base font-semibold leading-6 flex items-center whitespace-nowrap"
                 >
-                  Discover More{" "}
+                  {HERO.ctaSecondary}{" "}
                   <span aria-hidden="true" className="ml-1">
                     →
                   </span>
@@ -138,26 +134,26 @@ export function Hero() {
               <div className="grid grid-cols-3 gap-3 sm:gap-4">
                 <div className="text-center p-4 sm:p-5 rounded-xl bg-slate-800/50 ring-1 ring-white/5">
                   <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-indigo-400">
-                    50+
+                    {HERO.stats.learners.value}
                   </div>
                   <div className="mt-2 text-xs sm:text-sm text-slate-400">
-                    Active Learners
+                    {HERO.stats.learners.label}
                   </div>
                 </div>
                 <div className="text-center p-4 sm:p-5 rounded-xl bg-slate-800/50 ring-1 ring-white/5">
                   <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-sky-400">
-                    10+
+                    {HERO.stats.projects.value}
                   </div>
                   <div className="mt-2 text-xs sm:text-sm text-slate-400">
-                    Projects
+                    {HERO.stats.projects.label}
                   </div>
                 </div>
                 <div className="text-center p-4 sm:p-5 rounded-xl bg-slate-800/50 ring-1 ring-white/5">
                   <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-purple-400">
-                    24/7
+                    {HERO.stats.learning.value}
                   </div>
                   <div className="mt-2 text-xs sm:text-sm text-slate-400">
-                    Learning
+                    {HERO.stats.learning.label}
                   </div>
                 </div>
               </div>
