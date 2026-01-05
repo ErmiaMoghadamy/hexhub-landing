@@ -1,11 +1,12 @@
-import type { AnchorHTMLAttributes, ReactNode } from "react";
+import type { AnchorHTMLAttributes, ReactNode, MouseEvent } from "react";
 import { forwardRef } from "react";
 import NextLink from "next/link";
 
-interface LinkProps extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'href'> {
+interface LinkProps extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'href' | 'onClick'> {
   variant?: "default" | "button";
   children: ReactNode;
   href: string;
+  onClick?: (e: MouseEvent<HTMLAnchorElement> | MouseEvent<HTMLButtonElement>) => void;
 }
 
 const Link = forwardRef<HTMLAnchorElement, LinkProps>(

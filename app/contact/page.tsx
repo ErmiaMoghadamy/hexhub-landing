@@ -120,6 +120,7 @@ export default function ContactPage() {
                       type="text"
                       id="name"
                       name="name"
+                      placeholder="Enter your name"
                       value={formData.name}
                       onChange={handleChange}
                       required
@@ -135,6 +136,7 @@ export default function ContactPage() {
                       type="email"
                       id="email"
                       name="email"
+                      placeholder="Enter your email"
                       value={formData.email}
                       onChange={handleChange}
                       required
@@ -150,6 +152,7 @@ export default function ContactPage() {
                       type="text"
                       id="subject"
                       name="subject"
+                      placeholder="Enter subject"
                       value={formData.subject}
                       onChange={handleChange}
                       required
@@ -164,6 +167,7 @@ export default function ContactPage() {
                     <textarea
                       id="message"
                       name="message"
+                      placeholder="Enter your message"
                       value={formData.message}
                       onChange={handleChange}
                       required

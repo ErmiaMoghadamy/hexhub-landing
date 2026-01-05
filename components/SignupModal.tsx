@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from 'react'
-import { SIGNUP_MODAL } from '../constants'
 
 interface SignupModalProps {
   isOpen: boolean
@@ -50,19 +49,19 @@ export function SignupModal({ isOpen, onClose }: SignupModalProps) {
 
         {step === 1 && (
           <div>
-            <h2 className="text-2xl font-bold text-white mb-4">{SIGNUP_MODAL.steps[0].title}</h2>
-            <p className="text-slate-300 mb-6">{SIGNUP_MODAL.steps[0].description}</p>
+            <h2 className="text-2xl font-bold text-white mb-4">Join HexHub</h2>
+            <p className="text-slate-300 mb-6">Let's get started with your basic information.</p>
             <div className="space-y-4">
               <input
                 type="text"
-                placeholder={SIGNUP_MODAL.steps[0].fields.name}
+                placeholder="Enter your full name"
                 value={formData.name}
                 onChange={(e) => updateFormData('name', e.target.value)}
                 className="w-full px-4 py-3 bg-slate-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-200 ease-in-out"
               />
               <input
                 type="email"
-                placeholder={SIGNUP_MODAL.steps[0].fields.email}
+                placeholder="Enter your email address"
                 value={formData.email}
                 onChange={(e) => updateFormData('email', e.target.value)}
                 className="w-full px-4 py-3 bg-slate-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-200 ease-in-out"
@@ -73,10 +72,10 @@ export function SignupModal({ isOpen, onClose }: SignupModalProps) {
 
         {step === 2 && (
           <div>
-            <h2 className="text-2xl font-bold text-white mb-4">{SIGNUP_MODAL.steps[1].title}</h2>
-            <p className="text-slate-300 mb-6">{SIGNUP_MODAL.steps[1].description}</p>
+            <h2 className="text-2xl font-bold text-white mb-4">Your Interests</h2>
+            <p className="text-slate-300 mb-6">Select the areas you're most interested in.</p>
             <div className="space-y-3">
-              {SIGNUP_MODAL.steps[1].interests.map((interest) => (
+              {['Data Science', 'Machine Learning', 'AI Engineering', 'All of the above'].map((interest) => (
                 <label key={interest} className="flex items-center space-x-3">
                   <input
                     type="checkbox"
@@ -98,8 +97,8 @@ export function SignupModal({ isOpen, onClose }: SignupModalProps) {
 
         {step === 3 && (
           <div>
-            <h2 className="text-2xl font-bold text-white mb-4">{SIGNUP_MODAL.steps[2].title}</h2>
-            <p className="text-slate-300 mb-6">{SIGNUP_MODAL.steps[2].description}</p>
+            <h2 className="text-2xl font-bold text-white mb-4">Almost Done!</h2>
+            <p className="text-slate-300 mb-6">Review your information and join the community.</p>
             <div className="space-y-2 text-sm">
               <p><strong>Name:</strong> {formData.name}</p>
               <p><strong>Email:</strong> {formData.email}</p>
@@ -114,7 +113,7 @@ export function SignupModal({ isOpen, onClose }: SignupModalProps) {
               onClick={handlePrev}
               className="px-6 py-2 text-slate-300 hover:text-white transition-colors duration-200 ease-in-out"
             >
-              {SIGNUP_MODAL.buttons.back}
+              Back
             </button>
           )}
           {step < 3 ? (
@@ -122,14 +121,14 @@ export function SignupModal({ isOpen, onClose }: SignupModalProps) {
               onClick={handleNext}
               className="ml-auto px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-all duration-200 ease-in-out hover:scale-105 active:scale-95"
             >
-              {SIGNUP_MODAL.buttons.next}
+              Next
             </button>
           ) : (
             <button
               onClick={handleSubmit}
               className="ml-auto px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-all duration-200 ease-in-out hover:scale-105 active:scale-95"
             >
-              {SIGNUP_MODAL.buttons.join}
+              Join Now
             </button>
           )}
         </div>

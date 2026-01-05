@@ -171,6 +171,7 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
                 id="login-email"
                 name="email"
                 type="email"
+                placeholder="Enter your email"
                 value={loginFormik.values.email}
                 onChange={loginFormik.handleChange}
                 onBlur={loginFormik.handleBlur}
@@ -201,6 +202,7 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
                 id="login-password"
                 name="password"
                 type="password"
+                placeholder="Enter your password"
                 value={loginFormik.values.password}
                 onChange={loginFormik.handleChange}
                 onBlur={loginFormik.handleBlur}
@@ -232,6 +234,7 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
                 id="signup-name"
                 name="name"
                 type="text"
+                placeholder="Enter your full name"
                 value={signupFormik.values.name}
                 onChange={signupFormik.handleChange}
                 onBlur={signupFormik.handleBlur}
@@ -250,6 +253,7 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
                 id="signup-email"
                 name="email"
                 type="email"
+                placeholder="Enter your email"
                 value={signupFormik.values.email}
                 onChange={signupFormik.handleChange}
                 onBlur={signupFormik.handleBlur}
@@ -268,6 +272,7 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
                 id="signup-password"
                 name="password"
                 type="password"
+                placeholder="Create a password"
                 value={signupFormik.values.password}
                 onChange={signupFormik.handleChange}
                 onBlur={signupFormik.handleBlur}
@@ -286,6 +291,7 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
                 id="signup-confirm-password"
                 name="confirmPassword"
                 type="password"
+                placeholder="Confirm your password"
                 value={signupFormik.values.confirmPassword}
                 onChange={signupFormik.handleChange}
                 onBlur={signupFormik.handleBlur}
